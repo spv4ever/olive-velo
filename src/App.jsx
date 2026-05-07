@@ -22,10 +22,10 @@ function App() {
         <Hero t={t} />
         <ConceptSection t={t} />
         <LocationSection t={t} />
-        <ExperienceSection />
-        <SpacesSection />
-        <GuestSection />
-        <CyclingServicesSection />
+        <ExperienceSection t={t} />
+        <SpacesSection t={t} />
+        <GuestSection t={t} />
+        <CyclingServicesSection t={t} />
         <ContactSection t={t} />
       </main>
       <Footer />

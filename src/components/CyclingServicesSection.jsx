@@ -1,24 +1,14 @@
 import React from 'react';
-const services = [
-  'Secure bike storage',
-  'Bike wash & basic workshop',
-  'Cycling laundry',
-  'Guided routes',
-  'Team room',
-  'Ride fuel',
-  'Recovery meals',
-  'Physiotherapy on demand'
-];
 
-function CyclingServicesSection() {
+function CyclingServicesSection({ t }) {
   return (
     <section id="cycling" className="section">
       <div className="section-head">
-        <p className="eyebrow">Cycling</p>
-        <h2>Cycling services</h2>
+        <p className="eyebrow">{t.cycling.eyebrow}</p>
+        <h2>{t.cycling.title}</h2>
       </div>
       <ul className="services-grid">
-        {services.map((service) => (
+        {t.cycling.services.map((service) => (
           <li key={service}>{service}</li>
         ))}
       </ul>
