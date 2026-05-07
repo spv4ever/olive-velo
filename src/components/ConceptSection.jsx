@@ -1,3 +1,4 @@
+import React from 'react';
 function ConceptSection() {
   return (
     <section id="concept" className="section">

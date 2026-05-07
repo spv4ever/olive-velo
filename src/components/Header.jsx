@@ -1,3 +1,4 @@
+import React from 'react';
 const links = [
   { href: '#concept', label: 'Concept' },
   { href: '#location', label: 'Location' },
