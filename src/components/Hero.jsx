@@ -2,7 +2,7 @@ import React from 'react';
 function Hero({ t }) {
   return (
     <section id="top" className="hero section">
-      <div className="hero-media image-placeholder" role="img" aria-label={t.hero.imageAria} />
+      <img className="hero-media" src="/images/hero-masia.jpg" alt={t.hero.imageAria} loading="eager" />
       <div className="hero-content">
         <p className="eyebrow">{t.hero.eyebrow}</p>
         <h1>{t.hero.title}</h1>
