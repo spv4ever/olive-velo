@@ -1,28 +1,30 @@
 import React from 'react';
-const links = [
-  { href: '#concept', label: 'Concept' },
-  { href: '#location', label: 'Location' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#spaces', label: 'Spaces' },
-  { href: '#cycling', label: 'Cycling' },
-  { href: '#contact', label: 'Contact' }
-];
+import { languages } from '../i18n';
 
-function Header() {
+const links = ['#concept', '#location', '#experience', '#spaces', '#cycling', '#contact'];
+
+function Header({ t, lang, setLang }) {
   return (
     <header className="site-header">
-      <a href="#top" className="brand-mark" aria-label="Olive and Velo home">
+      <a href="#top" className="brand-mark" aria-label={t.header.homeAria}>
         olive&velo
       </a>
-      <nav aria-label="Main navigation">
+      <nav aria-label={t.header.navAria}>
         <ul className="nav-list">
-          {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href}>{link.label}</a>
+          {links.map((href, index) => (
+            <li key={href}>
+              <a href={href}>{t.nav[index]}</a>
             </li>
           ))}
         </ul>
       </nav>
+      <div className="lang-switcher" aria-label="Language switcher">
+        {languages.map((item) => (
+          <button key={item.code} type="button" className={item.code === lang ? 'active' : ''} onClick={() => setLang(item.code)}>
+            {item.label}
+          </button>
+        ))}
+      </div>
     </header>
   );
 }

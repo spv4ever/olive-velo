@@ -1,14 +1,12 @@
 import React from 'react';
-function ContactSection() {
+function ContactSection({ t }) {
   return (
     <section id="contact" className="section cta-section">
-      <p className="eyebrow">Coming soon</p>
-      <h2>A new cycling house retreat is coming to Girona</h2>
-      <p>
-        Olive & Velo is being created as a place to ride, recover and live the Mediterranean rhythm.
-      </p>
+      <p className="eyebrow">{t.contact.eyebrow}</p>
+      <h2>{t.contact.title}</h2>
+      <p>{t.contact.text}</p>
       <a className="button button-primary" href="mailto:hello@oliveandvelo.com">
-        Contact us
+        {t.contact.cta}
       </a>
     </section>
   );
