@@ -141,6 +141,29 @@ p { line-height: 1.7; margin: 0; color: var(--text-muted); }
   gap: 0.45rem;
 }
 .site-footer p { text-transform: lowercase; letter-spacing: 0.08em; font-size: 0.85rem; }
+.footer-link {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0.3rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+}
+
+.social-links li {
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+}
 
 @media (max-width: 360px) {
   .section {
