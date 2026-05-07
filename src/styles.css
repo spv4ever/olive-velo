@@ -41,8 +41,19 @@ p { line-height: 1.7; margin: 0; color: var(--text-muted); }
   background: color-mix(in srgb, var(--bg) 90%, white 10%);
   border-bottom: 1px solid var(--line);
   z-index: 20;
+  flex-wrap: wrap;
 }
-.brand-mark { text-decoration: none; color: var(--text); font-weight: 600; letter-spacing: 0.06em; }
+.brand-mark {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+.site-header nav {
+  flex: 1 1 100%;
+  order: 3;
+}
 .nav-list {
   list-style: none;
   display: flex;
@@ -50,7 +61,7 @@ p { line-height: 1.7; margin: 0; color: var(--text-muted); }
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .nav-list a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; }
 
@@ -131,13 +142,35 @@ p { line-height: 1.7; margin: 0; color: var(--text-muted); }
 }
 .site-footer p { text-transform: lowercase; letter-spacing: 0.08em; font-size: 0.85rem; }
 
+@media (max-width: 360px) {
+  .section {
+    padding: 4.5rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.7rem, 10vw, 2.2rem);
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px) {
   .section { padding: 6.5rem 2rem; }
   .site-header { padding: 1rem 2rem; }
+  .site-header nav {
+    flex: 1 1 auto;
+    order: 0;
+  }
   .two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .spaces-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nav-list {
+    justify-content: flex-end;
+  }
 }
 
 @keyframes shimmer {
@@ -145,5 +178,13 @@ p { line-height: 1.7; margin: 0; color: var(--text-muted); }
 }
 
 .lang-switcher { display: inline-flex; gap: 0.4rem; }
-.lang-switcher button { border: 1px solid var(--color-border); background: transparent; color: var(--color-text); padding: 0.25rem 0.5rem; border-radius: 999px; font-size: 0.72rem; cursor: pointer; }
-.lang-switcher button.active { background: var(--color-text); color: var(--color-bg); }
+.lang-switcher button {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+.lang-switcher button.active { background: var(--text); color: var(--bg); }
