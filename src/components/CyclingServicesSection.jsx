@@ -1,3 +1,4 @@
+import React from 'react';
 const services = [
   'Secure bike storage',
   'Bike wash & basic workshop',

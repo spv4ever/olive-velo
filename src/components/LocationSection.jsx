@@ -1,3 +1,4 @@
+import React from 'react';
 function LocationSection() {
   const items = [
     'Girona · Costa Brava',
