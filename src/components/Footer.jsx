@@ -6,6 +6,8 @@ function Footer() {
       <p>cycling house retreat</p>
       <p>Slow · Ride · Live</p>
       <p>Girona · Costa Brava</p>
+      <p>info@oliveandvelo.com</p>
+      <p>Instagram: @oliveandvelo · X: @oliveandvelo · TikTok: oliveandvelo</p>
     </footer>
   );
 }
