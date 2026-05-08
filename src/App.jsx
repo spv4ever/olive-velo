@@ -15,7 +15,7 @@ import { translations } from './i18n';
 function App() {
   const [lang, setLang] = useState('es');
   const t = useMemo(() => translations[lang] ?? translations.es, [lang]);
-  const isConceptPage = window.location.pathname === '/concepto';
+  const isConceptPage = window.location.pathname === '/concepto' || window.location.pathname === '/concepto/';
 
   return (
     <div className="page">
