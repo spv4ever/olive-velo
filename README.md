@@ -49,3 +49,11 @@ npm run dev      # entorno de desarrollo
 npm run build    # build de producción
 npm run preview  # previsualizar build de producción
 ```
+
+## Logo en la barra de menú
+
+Para mostrar el logo en la esquina superior izquierda del header, coloca tu archivo en:
+
+- `public/logo-olive-velo.png`
+
+La app lo carga automáticamente desde la ruta `/logo-olive-velo.png`.
