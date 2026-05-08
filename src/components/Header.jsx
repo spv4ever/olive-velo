@@ -7,7 +7,7 @@ function Header({ t, lang, setLang }) {
   return (
     <header className="site-header">
       <a href="#top" className="brand-mark" aria-label={t.header.homeAria}>
-        olive&velo
+        <img src="/logo-olive-velo.png" alt="Olive & Velo" className="brand-logo" />
       </a>
       <nav aria-label={t.header.navAria}>
         <ul className="nav-list">
