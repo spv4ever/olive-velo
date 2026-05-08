@@ -15,6 +15,10 @@ body {
   background: var(--bg);
 }
 
+.page {
+  position: relative;
+}
+
 h1, h2, h3 {
   font-family: 'Cormorant Garamond', 'Times New Roman', serif;
   letter-spacing: 0.02em;
@@ -65,13 +69,52 @@ p { line-height: 1.7; margin: 0; color: var(--text-muted); }
 }
 .nav-list a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; }
 
-.hero { padding-top: 2rem; border-top: 0; }
+.hero {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: flex-end;
+  padding-top: 2rem;
+  border-top: 0;
+  overflow: hidden;
+}
 .hero-media {
-  min-height: 44vh;
-  width: 100%;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 70px);
   object-fit: cover;
-  border-radius: 0.4rem;
-  margin-bottom: 1.8rem;
+  z-index: -2;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.hero::after {
+  content: '';
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.48));
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  max-width: min(720px, 100%);
+  padding: 1.6rem;
+  background: color-mix(in srgb, black 26%, transparent);
+  border: 1px solid color-mix(in srgb, white 25%, transparent);
+  backdrop-filter: blur(3px);
+  margin-bottom: 1.4rem;
+}
+
+.hero-content p,
+.hero .eyebrow {
+  color: color-mix(in srgb, #fff 92%, #cfcfcf 8%);
 }
 .hero-content h1 { font-size: clamp(2rem, 6vw, 4rem); max-width: 16ch; }
 .hero-content p { max-width: 60ch; }
@@ -86,6 +129,15 @@ p { line-height: 1.7; margin: 0; color: var(--text-muted); }
 .button { padding: 0.8rem 1.2rem; text-decoration: none; border: 1px solid var(--text); font-size: 0.9rem; }
 .button-primary { background: var(--text); color: var(--bg); }
 .button-secondary { color: var(--text); background: transparent; }
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+main .section:not(.hero) {
+  background: var(--bg);
+}
 
 .two-col, .card-grid, .spaces-grid { display: grid; gap: 1.2rem; margin-top: 1.2rem; }
 .card, .space-card {
@@ -280,3 +332,6 @@ p { line-height: 1.7; margin: 0; color: var(--text-muted); }
 .botcheck {
   display: none;
 }
+
+.hero .button-primary { background: #fff; color: #1f1d1a; border-color: #fff; }
+.hero .button-secondary { color: #fff; border-color: rgba(255,255,255,0.85); }
