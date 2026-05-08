@@ -199,11 +199,15 @@ main .section:not(.hero) {
 .cta-section .button { margin-top: 1.5rem; display: inline-block; }
 
 .site-footer {
+  position: relative;
+  z-index: 2;
   border-top: 1px solid var(--line);
   padding: 2.3rem 1.2rem 3rem;
   text-align: center;
   display: grid;
   gap: 0.45rem;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(2px);
 }
 .site-footer p { text-transform: lowercase; letter-spacing: 0.08em; font-size: 0.85rem; }
 .footer-link {
