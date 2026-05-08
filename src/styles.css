@@ -136,7 +136,8 @@ main {
 }
 
 main .section:not(.hero) {
-  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: blur(2px);
 }
 
 .two-col, .card-grid, .spaces-grid { display: grid; gap: 1.2rem; margin-top: 1.2rem; }
