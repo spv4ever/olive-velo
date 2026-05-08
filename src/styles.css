@@ -218,6 +218,12 @@ main .section:not(.hero) {
   backdrop-filter: blur(2px);
 }
 .site-footer p { text-transform: lowercase; letter-spacing: 0.08em; font-size: 0.85rem; }
+.footer-logo {
+  display: block;
+  width: clamp(96px, 12vw, 130px);
+  height: auto;
+  margin: 0 auto 0.25rem;
+}
 .footer-link {
   color: var(--text-muted);
   text-decoration: none;

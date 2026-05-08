@@ -24,7 +24,7 @@ const socialLinks = [
 function Footer() {
   return (
     <footer className="site-footer">
-      <p>olive&velo</p>
+      <img src="/logo-olive-velo.png" alt="Olive & Velo" className="footer-logo" />
       <p>cycling house retreat</p>
       <p>Slow · Ride · Live</p>
       <p>Girona · Costa Brava</p>
