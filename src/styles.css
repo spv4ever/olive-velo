@@ -359,3 +359,9 @@ main .section:not(.hero) {
 .section-more { margin-top: 1.5rem; }
 .detail-page .detail-hero { border-top: 0; padding-top: 7rem; }
 .detail-page h1 { font-size: clamp(2rem, 6vw, 3.5rem); max-width: 20ch; }
+
+
+.detail-page .section .button {
+  display: inline-block;
+  margin-top: 1.25rem;
+}
