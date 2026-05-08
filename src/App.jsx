@@ -9,25 +9,31 @@ import GuestSection from './components/GuestSection';
 import CyclingServicesSection from './components/CyclingServicesSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import ConceptPage from './components/ConceptPage';
 import { translations } from './i18n';
 
 function App() {
   const [lang, setLang] = useState('es');
   const t = useMemo(() => translations[lang] ?? translations.es, [lang]);
+  const isConceptPage = window.location.pathname === '/concepto';
 
   return (
     <div className="page">
       <Header t={t} lang={lang} setLang={setLang} />
-      <main>
-        <Hero t={t} />
-        <ConceptSection t={t} />
-        <LocationSection t={t} />
-        <ExperienceSection t={t} />
-        <SpacesSection t={t} />
-        <GuestSection t={t} />
-        <CyclingServicesSection t={t} />
-        <ContactSection t={t} />
-      </main>
+      {isConceptPage ? (
+        <ConceptPage t={t} />
+      ) : (
+        <main>
+          <Hero t={t} />
+          <ConceptSection t={t} />
+          <LocationSection t={t} />
+          <ExperienceSection t={t} />
+          <SpacesSection t={t} />
+          <GuestSection t={t} />
+          <CyclingServicesSection t={t} />
+          <ContactSection t={t} />
+        </main>
+      )}
       <Footer />
     </div>
   );

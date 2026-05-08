@@ -10,6 +10,9 @@ function ConceptSection({ t }) {
         <p>{t.concept.p1}</p>
         <p>{t.concept.p2}</p>
       </div>
+      <div className="section-more">
+        <a className="button button-secondary" href="/concepto">{t.concept.more}</a>
+      </div>
     </section>
   );
 }
