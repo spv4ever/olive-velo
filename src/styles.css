@@ -354,3 +354,8 @@ main .section:not(.hero) {
 
 .hero .button-primary { background: #fff; color: #1f1d1a; border-color: #fff; }
 .hero .button-secondary { color: #fff; border-color: rgba(255,255,255,0.85); }
+
+
+.section-more { margin-top: 1.5rem; }
+.detail-page .detail-hero { border-top: 0; padding-top: 7rem; }
+.detail-page h1 { font-size: clamp(2rem, 6vw, 3.5rem); max-width: 20ch; }
